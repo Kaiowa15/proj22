@@ -1,2 +1,1 @@
-# proj22
-sussy
+# project-C22-template
