@@ -12,6 +12,7 @@ function preload() {
   backgroundImg = loadImage("./assets/background.png");
   baseimage = loadImage("./assets/base.png");
   playerimage = loadImage("./assets/player.png");
+  archerimage = loadImage("./assets/playerArcher.png")
 }
 
 function setup() {
@@ -33,7 +34,8 @@ function setup() {
    player= Bodies.rectangle(250,playerBase.position.y - 160,50,180,options);
   World.add(world, player);
 
-
+  playerArcher = Bodies.rectangle(340,playerBase.position.y - 112,120,120, options);
+  World.add(world,playerArcher)
 }
 
 function draw() {
@@ -44,6 +46,8 @@ function draw() {
 
   //exibir a imagem da base do jogador usando a função image()
   image(playerimage,player.position.x,player.position.y,50,180)
+
+  image(archerimage,playerArcher.position.x,playerArcher.position.y, 120, 120)
 
   Engine.update(engine);
 
